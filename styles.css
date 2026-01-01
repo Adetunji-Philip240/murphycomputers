@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.logo {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--main-color);
+}
+
+.font1 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: bold;
+  font-size: 60px;
+  font-variation-settings: "wdth" 100;
+}
+.font2 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: bold;
+  font-size: 40px;
+  font-variation-settings: "wdth" 100;
+}
+:root {
+  --main-color: #a91b0d;
+  --second-color: #f59e0b;
+}
+a {
+  text-decoration: none !important;
+}
+
+/* Dropdown container */
+.nav .dropdown {
+  position: relative;
+}
+
+/* Hide menu by default */
+.nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* show below parent */
+  left: 0;
+  background: #fff;
+  padding: 10px 0;
+  list-style: none;
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  z-index: 999;
+}
+
+/* Show on hover */
+.nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown item style */
+.nav .dropdown-item {
+  padding: 8px 15px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.nav .dropdown-item:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+
+nav {
+  position: sticky; /* Make the navbar sticky */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it stays above other content */
+  background-color: white; /* Background color */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* New style when scrolled */
+nav.scrolled {
+  background-color: var(--second-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+nav.scrolled .nav-link {
+  color: white !important; /* Change link colors */
+}
+
+nav.scrolled .book-now {
+  background-color: white;
+  color: var(--second-color);
+}
+
+.nav a {
+  color: black;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: var(--main-color);
+}
+
+.book-now {
+  background-color: var(--second-color);
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+main {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  padding: 20px;
+}
+
+.spark-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.img-mac {
+  width: 70%;
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Spark glow */
+.spark-wrapper::before,
+.spark-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 0.6) 10%,
+    transparent 60%
+  );
+  transform: translate(-50%, -50%);
+  filter: blur(25px);
+  opacity: 0.7;
+  animation: spark 4s linear infinite;
+  z-index: 1;
+}
+
+/* Second spark layer for richness */
+.spark-wrapper::after {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(
+    circle,
+    rgba(226, 15, 15, 0.5) 10%,
+    transparent 60%
+  );
+  animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes spark {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.4;
+  }
+}
+
+.btnA {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btnA:hover {
+  background-color: var(--second-color);
+}
+
+.btnB {
+  background: none;
+  color: var(--main-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btnB:hover {
+  color: var(--second-color);
+}
+
+.systems {
+  height: 100%;
+  padding: 15px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+/* Image container */
+.systems img {
+  width: 100%;
+  height: 180px; /* SAME height for all images */
+  object-fit: cover; /* keeps image proportional */
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Text spacing */
+.systems p {
+  font-size: 14px;
+  margin: 6px 0;
+  flex-grow: 0;
+}
+
+/* Push button to bottom */
+.systems a {
+  margin-top: auto;
+}
+
+.img-fitA {
+  display: block;
+  margin: auto;
+  width: 80%;
+  border-radius: 10px;
+}
+/*Small Device Screen*/
+
+@media (max-width: 767px) {
+  nav .nav-item {
+    display: none !important;
+  }
+
+  .menu {
+    display: flex; /* keep flex so transition works */
+    flex-direction: column;
+    width: 70%; /* adjust width of the sliding panel */
+    max-width: 300px; /* optional */
+    position: fixed; /* fixed so it stays on screen */
+    top: 50px;
+    right: 0;
+    height: 100vh;
+    background-color: white;
+    padding: 30px;
+    z-index: 999; /* make sure it's above everything */
+
+    /* Animation start: hidden offscreen */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .menu > a {
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+  }
+  #menu-item:hover {
+    color: var(--main-color);
+  }
+  .menu-icon {
+    border: none;
+    margin-right: 30px;
+    font-size: 30px;
+    background: none;
+    color: black;
+  }
+  .menu-icon.close {
+    display: block;
+  }
+  .menu.active {
+    transform: translateX(0); /* Slide into view */
+  }
+
+  /* Dropdown hidden by default */
+
+  .dropdown-mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+
+  .dropdown-mobile > a {
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+  }
+  .dropdown-content {
+    display: none;
+    flex-direction: column;
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .dropdown-content a:hover {
+    color: var(--main-color);
+  }
+
+  .choose-us > div > div > img {
+    width: 100%;
+
+    display: block;
+    margin: auto;
+  }
+
+  .img {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .ovx {
+    overflow-x: scroll !important;
+  }
+}
+
+/*For Tablet Screen*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav .nav-item {
+    display: none !important;
+  }
+
+  .menu {
+    display: flex; /* keep flex so transition works */
+    flex-direction: column;
+    width: 70%; /* adjust width of the sliding panel */
+    max-width: 300px; /* optional */
+    position: fixed; /* fixed so it stays on screen */
+    top: 50px;
+    right: 0;
+    height: 100vh;
+    background-color: white;
+    padding: 30px;
+    z-index: 999; /* make sure it's above everything */
+
+    /* Animation start: hidden offscreen */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .menu > a {
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+  }
+  #menu-item:hover {
+    color: var(--main-color);
+  }
+  .menu-icon {
+    border: none;
+    margin-right: 30px;
+    font-size: 30px;
+    background: none;
+    color: black;
+  }
+  .menu-icon.close {
+    display: block;
+  }
+  .menu.active {
+    transform: translateX(0); /* Slide into view */
+  }
+
+  main > div > div > img {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+  }
+
+  /* Dropdown hidden by default */
+
+  .dropdown-mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+
+  .dropdown-mobile > a {
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+  }
+  .dropdown-content {
+    display: none;
+    flex-direction: column;
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .dropdown-content a:hover {
+    color: var(--main-color);
+  }
+}

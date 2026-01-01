@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Creating a FavIcon-->
+    <link rel="icon" type="image/x-icon" href="./images/logo.png" />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME LINK -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--The Navigation Bar-->
+    <nav
+      class="d-flex justify-content-between align-items-center p-3 shadow-sm"
+    >
+      <div class="logo">
+        <h4 class="m-0">MURPHY COMPUTERS</h4>
+      </div>
+
+      <!-- Navigation Links For Larger Screen-->
+      <ul class="nav">
+        <li class="nav-item py-2">
+          <a class="nav-link" style="color: var(--main-color)" href="/">Home</a>
+        </li>
+        <li class="nav-item py-2">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <!-- Services Dropdown -->
+        <li class="nav-item py-2 dropdown">
+          <a class="nav-link dropdown-toggle">Products</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="./services/web-dev.html"
+                >Website Development</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="./services/brand-marketing.html"
+                >Brand Marketing</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="./services/social-media.html"
+                >Social Media Marketing</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="./services/web-dev-training.html"
+                >Web Development Training</a
+              >
+            </li>
+            <li><a class="dropdown-item" href="#">Programming Tutorial</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item py-2">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><button type="button" class="px-4 py-2 book-now rounded">
+              Order Now
+            </button></a
+          >
+        </li>
+      </ul>
+      <!-- Hamburger Icon -->
+      <button class="menu-icon d-lg-none" onclick="toggleMenu()">
+        <span
+          style="color: var(--main-color)"
+          id="toggler"
+          class="fas fa-bars"
+        ></span>
+      </button>
+
+      <!-- Navigation Links For Smaller Screen-->
+      <div id="menu" class="menu d-lg-none">
+        <a id="menu-item" style="color: var(--main-color)" href="/">Home</a>
+        <a id="menu-item" href="about.html">About</a>
+
+        <!-- Services with dropdown -->
+        <div class="dropdown-mobile">
+          <a id="menu-item" href="javascript:void(0)" onclick="toggleDropdown()"
+            >Products ▾</a
+          >
+          <div id="servicesDropdown" class="dropdown-content">
+            <a href="./services/web-dev.html">Website Development</a>
+            <a href="./services/brand-marketing.html">Brand Marketing</a>
+            <a href="./services/social-media.html">Social Media Marketing</a>
+            <a href="./services/web-dev-training.html"
+              >Web Development Training</a
+            >
+            <a href="#">Programming Tutorial</a>
+          </div>
+        </div>
+
+        <a id="menu-item" href="careers.html">Contact Us</a>
+        <a href="/"
+          ><button type="button" class="px-4 py-2 book-now rounded">
+            Order Now
+          </button></a
+        >
+      </div>
+    </nav>
+
+    <!--Main Section-->
+
+    <main>
+      <div class="row container">
+        <div class="col-sm-6 p-5">
+          <h3>Your Trusted Source for Quality Computers & Gadgets</h3>
+          <p>
+            Murphy Computers provides high-quality laptops, desktops, and
+            accessories — both UK-Used and Brand New — at affordable prices.
+          </p>
+
+          <a href="#">
+            <button class="btnA">View Products</button>
+          </a>
+        </div>
+        <div class="col-sm-6 spark-wrapper">
+          <img src="./images/macbook.png" alt="MacBook" class="img-mac" />
+        </div>
+      </div>
+    </main>
+
+    <!--Show some products-->
+    <section class="mt-3">
+      <div class="row container mx-auto">
+        <div class="col-sm-3 mb-3">
+          <div class="systems">
+            <img src="./images/hp-elitebook-845.jpg" alt="HP EliteBook 845" />
+            <p>HP EliteBook 845 G8- Ryzen 5 Pro 5650U/AMD 2.3 - 16GB...</p>
+            <p>₦ 490,000</p>
+            <a href="#">
+              <button class="btnA">Buy Now!</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-3 mb-3">
+          <div class="systems">
+            <img
+              src="./images/dell-latitude-7490.jpg"
+              alt="Dell Latitude 7490"
+            />
+            <p>
+              DELL Latitude 7490 Intel Core I5 TOUCHSCREEN - 512GB SSD/16GB...
+            </p>
+            <p>₦ 450,000</p>
+            <a href="#">
+              <button class="btnA">Buy Now!</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-3 mb-3">
+          <div class="systems">
+            <img
+              src="./images/dell-latitude-7490.jpg"
+              alt="Dell Latitude 7490"
+            />
+            <p>
+              DELL Latitude 7490 Intel Core I5 TOUCHSCREEN - 512GB SSD/16GB...
+            </p>
+            <p>₦ 450,000</p>
+            <a href="#">
+              <button class="btnA">Buy Now!</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-3 mb-3">
+          <div class="systems">
+            <img
+              src="./images/dell-latitude-7490.jpg"
+              alt="Dell Latitude 7490"
+            />
+            <p>
+              DELL Latitude 7490 Intel Core I5 TOUCHSCREEN - 512GB SSD/16GB...
+            </p>
+            <p>₦ 450,000</p>
+            <a href="#">
+              <button class="btnA">Buy Now!</button>
+            </a>
+          </div>
+        </div>
+
+        <a href="#">
+          <button class="btnB float-end">
+            View More Products <i class="fas fa-arrow-right"></i></button
+        ></a>
+      </div>
+    </section>
+
+    <!--Why Choose Us-->
+    <section class="mt-3">
+      <div class="row container mx-auto">
+        <div class="col-sm-6 p-4">
+          <h3 style="color: var(--main-color)">Why Choose Murphy Computers?</h3>
+          <ul>
+            <li>Wide Selection of Quality Products</li>
+            <li>Affordable Prices</li>
+            <li>Excellent Customer Service</li>
+            <li>Reliable Warranty and Support</li>
+            <li>Fast and Secure Shipping</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 p-4">
+          <img
+            src="./images/why-choose-us.jpg"
+            alt="Why Choose Us"
+            class="img-fitA"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Custom JS-->
+    <script src="index.js"></script>
+  </body>
+</html>
