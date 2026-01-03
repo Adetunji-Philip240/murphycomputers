@@ -258,6 +258,59 @@ main {
   width: 80%;
   border-radius: 10px;
 }
+
+.hp-lovers {
+  background-color: var(--second-color);
+  color: white;
+  padding: 20px;
+}
+
+.bullet li::marker {
+  color: var(--main-color);
+}
+
+.img-animate {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+  }
+}
+
+.blog-title {
+  position: relative;
+  display: inline-block;
+  color: var(--main-color);
+}
+
+.blog-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background-color: var(--main-color);
+  transition: width 0.5s ease;
+}
+
+/* Animate on hover */
+.blog-title:hover::after {
+  width: 100%;
+}
+
+.img-fitB {
+  width: 50%;
+  height: 220px; /* same height for all images */
+  object-fit: cover; /* crop nicely without distortion */
+  border-radius: 8px; /* optional: smooth edges */
+}
 /*Small Device Screen*/
 
 @media (max-width: 767px) {
